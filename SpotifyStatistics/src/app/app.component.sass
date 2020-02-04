@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap')
+$primary:#1db954
+$secondary:#1f703c
+$text:#fff
+a,p,h1 
+    font-family: 'Nunito', 'sans-serif'
+    font-size: 25px
+    font-weight: bold
+h1
+    font-size: 50px
+.navbar
+    position: fixed
+    width: 100%
+    display: flex
+    flex-flow: column
+    justify-content: flex-center
+    list-style: none
+    margin: 0
+    background: $primary
+.title
+    height: 100%
+    align-self: center
+    margin: none
+    color: $text
+.buttons
+    display: flex
+    flex-flow: row
+    background-color: $secondary
+    :hover
+        background-color: $text
+        p
+            color: $primary
+        
+.button
+    height: 100%
+    width: 100%
+    color: $text
+    text-align: center
+@media screen and ( height: 2000px )
+    p
+        font-size: 2px
+    
+    
+    
+    
