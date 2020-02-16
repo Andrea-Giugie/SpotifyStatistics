@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap')
 $primary:#1db954
-$secondary:#1f703c
+$secondary:#1C572D
 $text:#fff
 a,p,h1 
     font-family: 'Nunito', 'sans-serif'
@@ -9,9 +9,21 @@ a,p,h1
     flex-basis: 10%
 h1
     font-size: 50px
+.info
+    padding: 2px
+    margin-left: 20%
+    height: 90%
+    margin-top: 5px
+    background-color: rgba(61, 61, 61, 0.733)
+    border-radius: 40px
+    p
+        color: $primary
+        font-size: 30px
+
     
     
 .container
+    min-height: 150px
     width: 98%
     height: 100px
     margin-top: 2%
@@ -22,9 +34,12 @@ h1
     text-align: center
     display: flex
     flex-flow: rows
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75)
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75)
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75)
 .containerImmagine
     flex-basis: 15%
-    
+ 
 .immagine
     width: 140px
     height: 140px
@@ -34,6 +49,6 @@ h1
     background-size: cover
     border-radius: 200px
     margin-top: 5px
-
+ 
 .numero
     margin-top: 55px
