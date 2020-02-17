@@ -11,19 +11,7 @@ export class CanzoneComponent implements OnInit {
   public artista: String;
   public numero: number;
 
-  constructor() {
-    this.immagine =
-      "url(https://i.scdn.co/image/ab67616d0000b273ccdb1982626f299b3b1d3efd)";
-    this.titolo = "'Till I Collapse";
-    this.artista = "Eminem";
-    this.numero = 1;
-  }
-  /* constructor(
-    public immagine: string = "url(https://i.scdn.co/image/ab67616d0000b273ccdb1982626f299b3b1d3efd)",
-    public titolo: string = "'Till I Collapse",
-    public artista: string = "Eminem",
-    public numero: number = 1
-  ) {}*/
+  constructor() {}
 
   ngOnInit() {}
 }

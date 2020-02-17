@@ -27,12 +27,16 @@ export class AppComponent {
   ) {}
 
   ngOnInit() {
-    this.dataService.sendGetRequest().subscribe((data: any[]) => {
+    this.dataService.sendGetRequest().subscribe((data: any) => {
       console.log(data);
+      let id: number = 1;
       this.canzoni = data;
-      this.aggiungi("a", "a", 1, "a");
-      this.aggiungi("a", "a", 1, "a");
-      this.aggiungi("a", "a", 1, "a");
+      data.items.forEach(canzone => {
+        let link: string = "url(" + canzone.album.images[0].url + ")";
+        this.aggiungi(canzone.name, canzone.artists[0].name, id, link);
+        console.log();
+        id++;
+      });
     });
   }
 
@@ -45,6 +49,11 @@ export class AppComponent {
     const componentFactory = this.componentFactoryResolver.resolveComponentFactory(
       CanzoneComponent
     );
-    const componentRef = this.container.createComponent(componentFactory);
+
+    const Canzone = this.container.createComponent(componentFactory);
+    Canzone.instance.titolo = titolo;
+    Canzone.instance.numero = numero;
+    Canzone.instance.immagine = immagine;
+    Canzone.instance.artista = artista;
   }
 }
