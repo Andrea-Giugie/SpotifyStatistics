@@ -5,7 +5,7 @@ import { HttpClient } from "@angular/common/http";
   providedIn: "root"
 })
 export class DataService {
-  private REST_API_SERVER = "https://jsonplaceholder.typicode.com/todos/1";
+  private REST_API_SERVER = "http://localhost:3000/";
 
   constructor(private httpClient: HttpClient) {}
   public sendGetRequest() {
