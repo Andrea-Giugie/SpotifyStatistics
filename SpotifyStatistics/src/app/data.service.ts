@@ -5,10 +5,11 @@ import { HttpClient } from "@angular/common/http";
   providedIn: "root"
 })
 export class DataService {
-  private REST_API_SERVER = "http://localhost:3000/";
+  private REST_API_SERVER = "/assets/data/test.json";
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient) { }
   public sendGetRequest() {
+
     return this.httpClient.get(this.REST_API_SERVER);
   }
 }

@@ -13,5 +13,5 @@ platformBrowserDynamic()
   .catch(err => console.error(err));
 
 window.onload = () => {
-  console.log("ciao");
+  //console.log("ciao");
 };
