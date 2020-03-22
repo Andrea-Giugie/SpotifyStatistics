@@ -10,7 +10,6 @@ const options = {
     headers: {
     }
 }
-//BQAikHo0K58gy_1psEsPANAxsHz6iBs6INOWdIXpVjTt5PO2xTAnIJMv_25hjHvH82PyaOLO_5k8NZg5ROasGkd3oTL5et8sTyIWfg-dL7dgGzNGDSpTeLeHDhsFnZh-2GTKBzO98XQl1INgqbWq9glgHw
 const https = require('https');
 app.get('/:auth', function (reque, response) {
     auth = reque.params.auth
@@ -22,7 +21,7 @@ app.get('/:auth', function (reque, response) {
             body += d;
         })
         res.on("end", () => {
-            console.log("letto");
+            console.log("HTTP request done");
             if (res.statusCode === 401) {
                 response.end("Non connesso");
             }
@@ -40,5 +39,5 @@ var server = app.listen(4201, function () {
     var host = server.address().address
     var port = server.address().port
 
-    console.log("Example app listening at http://%s:%s", host, port)
+    console.log("Server Listening at http://%s:%s", host, port)
 })
